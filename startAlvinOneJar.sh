@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if -d ./.git
+then
+   if git remote | grep "alvinOneGithub"!="alvinOneGithub"
+   then
+     git remote add alvinOneGithub https://github.com/williamjmcmillan/alvinOneJar.git
+     git clone alvinOneGithub master
+     wait
+     java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar 
+   elif git remote | grep "alvinOneGithub"="alvinOneGitHub"
+   then
+     git pull alvinOneGithub Master
+     wait
+     java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar
+   elif
+elif  ! -d ./.git
+then
+   git init
+   git remote add alvinOneGithub https://github.com/williamjmcmillan/alvinOneJar.git   
+   git clone alvinOneGithub master
+   wait
+   java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar
+elif $1="now" || $1="-n" || $1="-now"
+then
+   java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar
