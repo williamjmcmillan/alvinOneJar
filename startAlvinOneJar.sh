@@ -1,7 +1,13 @@
 #!/bin/sh
 
 
-if which 
+if ! which mariadb-server-10.0
+then
+   echo "NO DATABASE"
+   echo "...INSTALLING"
+   sudo apt-get install mariadb-server-10.0
+   wait
+fi
 if -d ./.git
 then
    if git remote | grep "alvinOneGithub"!="alvinOneGithub"
