@@ -1,5 +1,7 @@
 #!/bin/sh
 
+
+if which 
 if -d ./.git
 then
    if git remote | grep "alvinOneGithub"!="alvinOneGithub"
