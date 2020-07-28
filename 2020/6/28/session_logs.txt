@@ -1,0 +1,4 @@
+
+java.sql.SQLException: No suitable driver found for jdbc:mariadb://localhost/
+java.sql.SQLException: No suitable driver found for jdbc:mariadb://localhost/
+java.sql.SQLException: No suitable driver found for jdbc:mariadb://localhost/

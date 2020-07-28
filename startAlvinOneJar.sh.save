@@ -1,13 +1,5 @@
 #!/bin/sh
 
-
-if ! which mariadb-server-10.0
-then
-   echo "NO DATABASE"
-   echo "...INSTALLING"
-   sudo apt-get install mariadb-server-10.0
-   wait
-fi
 if -d ./.git
 then
    if git remote | grep "alvinOneGithub"!="alvinOneGithub"
@@ -15,7 +7,7 @@ then
      git remote add alvinOneGithub https://github.com/williamjmcmillan/alvinOneJar.git
      git clone alvinOneGithub master
      wait
-     java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar 
+     java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml,javafx.basehttps://github.com/williamjmcmillan/alvinOneJar.git -jar AlvinOne.jar 
    elif git remote | grep "alvinOneGithub"="alvinOneGitHub"
    then
      git pull alvinOneGithub Master
