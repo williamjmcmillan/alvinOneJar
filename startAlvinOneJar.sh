@@ -8,6 +8,12 @@ then
    sudo apt-get install mariadb-server-10.0
    wait
 fi
+if ! which pi4j
+then
+   echo "INSTALLING PI4J"
+   sudo dpkg -i ./install/pi4j-1.2.deb
+   wait
+fi
 if -d ./.git
 then
    if git remote | grep "alvinOneGithub"!="alvinOneGithub"
