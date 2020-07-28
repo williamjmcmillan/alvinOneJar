@@ -37,6 +37,6 @@ then
    java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar
 elif $1="now" || $1="-n" || $1="-now"
 then
-   java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml -jar AlvinOne.jar
+   java --module-path=./lib --add-modules=javafx.controls,javafx.graphics,javafx.fxml,pi4j-core,pi4j-device,pi4j-gpio-extension -jar AlvinOne.jar
 fi
 exit 0;
